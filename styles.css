@@ -1,0 +1,283 @@
+* {
+    font-family: FreeMono, monospace;
+}
+
+
+
+:root {
+    --body-background:              #DAD3BD;
+    --header-background:            #626F41;
+    --header-font:                  #e3dfd3;
+    --checkbox-background:          #929671;
+    --checkbox:                       none;
+    --checkbox-font:                #ffffff;
+    --checkbox-button-background:   #5C693A;
+    --checkbox-button-font:         #ffffff;
+    --checkbox-check:               #024C93;
+    --searchBar-font:               #000000;
+    --item-border:                  #ffffff;
+    --content-background:           #ffffff5e;
+    --noResult:                     #ff0051;
+    --term-button-background:       #5C6A3B;
+    --term-button-background-focus: #717C5F;
+    --term-button-font:             #ebe0bf;
+    --term-button-font-hover:       #ffffff;
+    --term-button-background-hover: #6C774B;
+    --shadow:                       #485130;
+    --shadow-light:                 #AEB287;
+    --shadow-content:               #C1B799;
+    --newPage-button:               #626F41;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+    background-color: var(--body-background);
+}
+
+header {
+    background-color: var(--header-background);
+    color: var(--header-font);
+    padding: 2px 2px;
+    text-align: center;
+}
+
+nav div { /* linha das checkbox */
+    background-color: var(--checkbox-background);
+    overflow: hidden;
+    color: var(--checkbox-font);
+    padding: 0;
+    text-align: center;
+    margin: 0;
+    list-style: none;
+    box-shadow: 0px 2px 0px var(--shadow-light);
+}
+
+nav div label {
+    display: inline;
+    padding: 20px;
+    background-color: var(--checkbox);
+    border-radius: 3px;
+    box-shadow: none;
+}
+
+.iconButton {
+   max-width: 40px;
+}
+
+.newPage {
+    padding: 5px;
+    background-color: var(--newPage-button);
+    border-radius: 3px;
+    box-shadow: 0px 3px 0px var(--shadow); /* Sombra inicial */
+    color: var(--checkbox-font);
+    text-decoration: none;
+    position: relative; /* Permite que o botão seja movido */
+    transition: all 0.1s ease;
+   
+}
+
+.newPage:hover {
+    background-color: var(--newPage-button);
+    color: var(--term-button-font-hover);
+    cursor: pointer;
+}
+
+.newPage:active {
+    box-shadow: none;
+    top: 2px;
+    background-color: var(--newPage-button);
+}
+
+/* pra tela menores */
+@media (max-width: 768px) {
+    nav div {
+        padding: 5px; /* Reduz o padding para maior compatibilidade */
+    }
+
+    nav div label {
+        padding: 5px; /* Reduz o padding dos labels */
+        font-size: 14px; /* Ajusta o tamanho da fonte */
+        box-shadow: none;
+        background-color: none;
+    }
+}
+
+/* pra tela muito pequenas */
+@media (max-width: 480px) {
+    nav div {
+        flex-direction: column; /* alinha os itens verticalmente */
+        padding: 5px; /* reduz ainda mais o padding */
+    }
+
+    nav div label {
+        padding: 10px; /* reduz o padding dos labels */
+        font-size: 12px; /* ajusta o tamanho da fonte */
+        background-color: none;
+        box-shadow: none;
+    }
+}
+
+#check:checked {
+    accent-color: var(--checkbox-check);
+}
+
+nav .button { /* mostrar todos */
+    background-color: var(--checkbox-button-background);
+    border: none;
+    border-radius: 3px; 
+    cursor: pointer;
+    box-shadow: 0px 2px 0px var(--shadow);
+    color: var(--checkbox-button-font);
+    position: relative;
+    transition: all 0.1s ease;
+    font-size: 20px;
+}
+
+nav .button:hover {
+    transform: scale(1.015); /* aumenta gradativamente ao passar o mouse por cima */
+}
+
+nav .button:active {
+    box-shadow: none;
+    top: 2px;
+    background-color: var(--newPage-button);
+}
+
+nav #searchBar {
+    margin-top: 10px; /* distância em cima da barra */
+    padding: 10px; /* tamanho da barra */
+    width: 75%; /* quanto que a barra ocupa na tela horizonltalmente */
+    margin-left: 10%; /* espaço na esqueda */
+    color: var(--searchBar-font);
+    border-radius: 5px;
+    font-size: 25px;
+    box-shadow: none;
+    transition: transform 0.25s ease;
+}
+
+nav #searchBar:hover {
+    transform: scale(1.015);
+}
+
+main {
+    padding: 20px;
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* espaço entre os itens */
+    /* align-items: center; com ele, quando um termo abre, o do lado se mantém fechado mas no meio do aberto  */
+}
+
+.item {
+    background-color: #ffffff00; 
+    padding: 20px; 
+    border-radius: 5px;
+    border-color: var(--item-border);
+    flex: 1 1 calc(33.333% - 20px); /* cada termo ocupa um terço da linha com espaçamento de 20px */
+    box-sizing: border-box;
+    display: none; /* termos não clicados inicialmente */
+}
+
+.content { 
+    display: none;
+    margin-top: 8px;
+    padding: 10px;
+    background-color: var(--content-background); 
+    border-radius: 8px; 
+    text-align: center; /* justificar vídeo e descrição*/
+    box-shadow: 0px 5px 0px var(--shadow-content);
+}
+
+.category-checkboxes {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha */
+    justify-content: space-between; /* Distribui o espaço entre os itens */
+    align-items: center; /* Alinha os itens verticalmente */
+    padding: 20px; /* Espaçamento interno */
+    gap: 10px; /* Espaço entre os itens */
+}
+
+.category-checkboxes a,
+.category-checkboxes label,
+.category-checkboxes .button {
+    flex: 1 1 40px; /* Flex-grow, flex-shrink, flex-basis: permite que cada item cresça e ocupe espaço */
+    text-align: center; /* Centraliza o texto */
+    margin: 5px; /* Espaçamento entre os elementos */
+    padding: 10px; /* Espaçamento interno */
+    background-color: var(--checkbox-button-background); /* Cor de fundo para os botões */
+    border: none; /* Borda para os botões */
+    border-radius: 5px; /* Cantos arredondados */
+    transition: background-color 0.3s; /* Efeito de transição */
+}
+
+.category-checkboxes a:hover,
+.category-checkboxes label:hover,
+.category-checkboxes .button:hover {
+    background-color: var(--checkbox-button-background); /* Cor de fundo ao passar o mouse */
+}
+
+/* Media query para telas menores */
+@media (max-width: 600px) {
+    .category-checkboxes {
+        flex-direction: column; 
+        align-items: stretch; /* Estica os itens para preencher a largura disponível */
+    }
+}
+
+input[type="checkbox"] { /* tamanho da checkbox das categorias */
+    width: 15px;
+    height: 15px;
+    transition: transform 0.3s ease;
+}
+
+input[type="checkbox"]:hover {
+    transform: scale(1.15);
+}
+
+#noResultsMessage {
+    color:var(--noResult);
+    font-size: 1.5em;
+    text-align: center;
+    align-items: center;
+        
+}
+
+.term-button {
+    background-color: var(--term-button-background);
+    color: var(--term-button-font);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    text-align: center;
+    width: 100%; /* sem ele, o botão variaria conforme o que está escrito nele*/
+    display: block;
+    margin-bottom: 10px;
+    transition: transform 0.25s ease; /* dá a possibilidade de aumentar gradativamente o botão */
+}
+
+.term-button:focus {
+    outline: none;
+    box-shadow: 0px 3px 0px var(--shadow-content); 
+    background-color: var(--term-button-background-focus);
+    transform: scale(1.05); /* mantém botão maior ao clicar */
+            
+}
+
+.term-button:hover {
+    background-color: var(--term-button-background-hover);
+    transform: scale(1.05); /* aumenta gradativamente ao passar o mouse por cima */
+    color: var(--term-button-font-hover);
+    box-shadow: 0px 3px 0px var(--shadow-content);   
+}
+
+.video {
+    height: 26rem;
+}

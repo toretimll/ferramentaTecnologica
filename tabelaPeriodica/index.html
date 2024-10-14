@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela Periódica Interativa</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../logoBranca.ico">
+</head>
+<body>
+    <h1>Tabela Periódica</h1>
+    <a href="../index.html" class="button">&larrhk; Voltar</a>
+
+    <button id="changeFontBtn" class="button change">Alterar Fonte</button>
+   
+    <div class="periodic-table"></div>
+
+    <div id="elementModal" class="modal" onclick="closeModal()">
+        <div id="modalContent" class="modal-content"></div>
+    </div>
+
+<!-- Legenda da tabela -->
+<div class="legend">
+    <div class="circle comVideo"></div>
+    <div class="description">COM Vídeo</div>
+</div>
+<div class="legend">
+    <div class="circle semVideo"></div>
+    <div class="description">SEM Vídeo</div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
