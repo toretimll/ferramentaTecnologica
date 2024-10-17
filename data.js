@@ -41,7 +41,7 @@ const termsData = [
     {
         name: "Átomos",
         categories: ["QGe"],
-        description: "Átomo é uma unidade básica de matéria que consiste num núcleo central de carga elétrica positiva envolto por uma nuvem de eletrões de carga negativa.",
+        description: "Átomo é uma unidade básica de matéria que consiste num núcleo central de carga elétrica positiva envolto por uma nuvem de elétrons de carga negativa.",
         gif: "gif/Atomos.gif"
     }
     ,
@@ -60,13 +60,13 @@ const termsData = [
     {
         name: "Ácido",
         categories: ["QGe"],
-        description: "Ácido é aquela substância que tem capacidade de doar ions de hidrogénio (H<sup>+</sup>) em solução aquosa.",
+        description: "Ácido é aquela substância que tem capacidade de doar íons de hidrogénio (H<sup>+</sup>) em solução aquosa.",
         gif: "gif/Acido.gif"
     },
     {
         name: "Básico/Alcalino",
         categories: ["QGe"],
-        description: "Básico é aquela substãncia que libertam ions (OH<sup>-</sup>) em meio aquoso.",
+        description: "Básico é aquela substãncia que libertam íons (OH<sup>-</sup>) em meio aquoso.",
         gif: "gif/Basico.gif"
     },
     {
@@ -78,7 +78,7 @@ const termsData = [
     {
         name: "Íon negativo",
         categories: ["QGe"],
-        description: "Íon positivo tem uma carga negativa. Ganhou elétron. Também chamado de ânodo.",
+        description: "Íon negativo tem uma carga negativa. Ganhou elétron. Também chamado de ânodo.",
         gif: "gif/Ion_negativo.gif"
     },
     {
