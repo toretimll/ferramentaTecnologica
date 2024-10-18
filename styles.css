@@ -76,7 +76,7 @@ nav div label {
     color: var(--checkbox-font);
     text-decoration: none;
     position: relative; /* Permite que o botão seja movido */
-    transition: all 0.1s ease;
+    transition: transform 0.5s ease-in-out;
    
 }
 
@@ -84,6 +84,7 @@ nav div label {
     background-color: var(--newPage-button);
     color: var(--term-button-font-hover);
     cursor: pointer;
+    transform: scale(1.03);
 }
 
 .newPage:active {

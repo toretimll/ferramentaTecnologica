@@ -19,7 +19,7 @@ h1 {
 
 
 .button {
-    background-color: #677245;
+    background-color: #5C6A3B;
     color: #DAD3BD;
     box-shadow: 0px 4px 0px #2B3318;
     text-decoration: none;
@@ -34,7 +34,7 @@ h1 {
 }
 
 .button:hover {
-    background-color: #808C55; 
+    background-color: #6C774B; 
     color: #ffffff;
     cursor: pointer;
 }
