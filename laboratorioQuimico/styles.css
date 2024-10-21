@@ -11,12 +11,10 @@ body {
 h1 {
     text-align: center;
     padding: 20px;
-    background-color: none;
-    margin: 0px 0px 0px 0px;
+    margin: 0;
     color: #626F41;
     text-shadow: 0px 2px 0px #C1B799;
 }
-
 
 .button {
     background-color: #5C6A3B;
@@ -46,7 +44,7 @@ h1 {
 
 .container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
     gap: 20px;
     padding: 20px;
     max-width: 1200px; 
@@ -106,24 +104,53 @@ h1 {
     text-align: center;
     background-color: #DAD3BD;
     border-radius: 10px;
-    position: relative; /* Adicionado para permitir que os elementos filhos sejam posicionados em relação a ele */
+    position: relative;
 }
 
 #close {
-    position: absolute; /* Posiciona o botão de fechar de forma absoluta */
-    top: 10px; /* Ajusta a posição vertical */
-    left: 15px; /* Ajusta a posição horizontal para a esquerda */
-    font-size: 24px; /* Tamanho do símbolo */
-    cursor: pointer; /* Mostra o cursor de link */
-    color: black; /* Cor do símbolo */
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
 }
 
 #close:hover {
-    color: rgba(0, 0, 0, 0.5); /* Altera a cor do botão de fechar ao passar o mouse */
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content img {
     max-width: 100%;
     height: auto;
     border-radius: 7px;
+}
+
+/* adicionar responsividade */
+@media (max-width: 768px) {
+    .button {
+        font-size: 16px; 
+    }
+    
+    h1 {
+        font-size: 24px; 
+    }
+    
+    .element {
+        font-size: 20px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .button {
+        padding: 8px 16px; 
+    }
+    
+    h1 {
+        font-size: 20px; 
+    }
+    
+    .element {
+        font-size: 18px; 
+    }
 }
