@@ -10,7 +10,7 @@ const termsData = [
     {
         name: "Ácido",
         categories: ["QGe"],
-        description: "Ácido é aquela substância que tem capacidade de doar íons de hidrogénio (H<sup>+</sup>) em solução aquosa.",
+        description: "Ácido é aquela substância que tem capacidade de doar íons de hidrogênio (H<sup>+</sup>) em solução aquosa.",
         gif: "gif/Acido.gif"
     },
     {
@@ -22,7 +22,7 @@ const termsData = [
     {
         name: "Básico/Alcalino",
         categories: ["QGe"],
-        description: "Básico é aquela substãncia que libertam íons (OH<sup>-</sup>) em meio aquoso.",
+        description: "Básico é aquela substãncia que libertam íons hidroxila (OH<sup>-</sup>) em meio aquoso.",
         gif: "gif/Basico.gif"
     },
     {
@@ -33,7 +33,7 @@ const termsData = [
     },
     {
         name: "Elemento Químico",
-        categories: ["QGe"],
+        categories: ["Ino"],
         description: "Elemento químico é o conjunto formado por átomos que apresentam o mesmo número atômico.",
         gif: "gif/Elemento_quimico.gif"
     },
@@ -44,15 +44,21 @@ const termsData = [
         gif: "gif/Gasoso.gif"
     },
     {
-        name: "Íon negativo",
-        categories: ["QGe"],
-        description: "Íon negativo tem uma carga negativa. Ganhou elétron. Também chamado de ânodo.",
+        name: "Hidroxila (OH<sup>-</sup>)",
+        categories: ["Ino"],
+        description: "A hidroxila é um ânion.",
+        gif: "gif/Hidroxila.gif"
+    },
+    {
+        name: "Íon negativo/Ânion",
+        categories: ["Ino"],
+        description: "Íon negativo tem uma carga negativa. Ganhou elétron.",
         gif: "gif/Ion_negativo.gif"
     },
     {
-        name: "Íon positivo",
-        categories: ["QGe"],
-        description: "Íon positivo tem carga positiva. Perdeu elétron. Também chamado de cátion.",
+        name: "Íon positivo/Cátion",
+        categories: ["Ino"],
+        description: "Íon positivo tem carga positiva. Perdeu elétron.",
         gif: "gif/Ion_positivo.gif"
     },
     {
@@ -96,5 +102,11 @@ const termsData = [
         categories: ["QGe"],
         description: "Quando suas moléculas estão bem juntinhas (reunidas e organizadas).",
         gif: "gif/Solido.gif"
+    },
+    {
+        name: "Sulfato (SO<sub>4</sub><sup>2-</sup>)",
+        categories: ["Ino"],
+        description: "O sulfato é um ânion.",
+        gif: "gif/Sulfato.gif"
     }  
 ];

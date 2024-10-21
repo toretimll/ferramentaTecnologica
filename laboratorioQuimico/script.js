@@ -1,16 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
     const elements = document.querySelectorAll('.element');
     const modal = document.getElementById('modal');
-    const modalName = document.getElementById('modal-name');
     const modalGif = document.getElementById('modal-gif');
+    const modalName = document.getElementById('modal-name'); // Selecionando o elemento para o nome
     const closeBtn = document.getElementById('close');
 
     elements.forEach(element => {
         element.addEventListener('click', () => {
-            const name = element.getAttribute('data-name');
             const gif = element.getAttribute('data-gif');
-            modalName.textContent = name;
+            const name = element.querySelector('img').alt; // Usando o atributo alt da imagem como nome
             modalGif.src = gif;
+            modalName.textContent = name; // Definindo o nome no modal
             modal.style.display = 'block';
         });
     });
